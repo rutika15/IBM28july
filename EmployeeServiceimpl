@@ -1,0 +1,80 @@
+
+package com.abstractexamples;
+import java.util.*;
+import java.io.*;
+public class Employeeserviceimpl extends EmployeeService {
+	ArrayList<String> arr=new ArrayList<>();
+	public String id;
+	public String fname;
+	public String lname;
+	public String sal;
+	public String id1;
+	/**
+	 * @return the id
+	 */
+	
+	@Override
+	public void createEmployee() {
+		// TODO Auto-generated method stub
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter id");
+		id=sc.next();
+		arr.add(id);
+		System.out.println("enter fname");
+		fname=sc.next();
+		arr.add(fname);
+		System.out.println("enter lname");
+		lname=sc.next();
+		arr.add(lname);
+		System.out.println("enter salary");
+		sal=sc.next();
+		arr.add(sal);
+		
+		
+		
+	}
+	
+	@Override
+	public void displayEmployee() {
+		// TODO Auto-generated method stub
+//		System.out.println("Id is: "+id);
+//		System.out.println("First name is: "+fname);
+//		System.out.println("Last name is: "+lname);
+//		System.out.println("Salary is: "+sal);
+		
+		for(String i:arr)
+		{
+			System.out.println(i);
+		}
+		
+	}
+	
+	@Override
+	public void deleteEmployeebyId(String id) {
+		// TODO Auto-generated method stub
+		String s=id;
+		for(String i:arr)
+		{
+			if(arr.contains(s))
+			{
+				arr.remove(i);
+			}
+		}
+	    
+		
+		
+	}
+	
+
+	@Override
+	public void updateEmployeebyId(String id) {
+		
+		// TODO Auto-generated method stub
+		System.out.print("hello");
+		
+	}
+
+	
+
+}
