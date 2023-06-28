@@ -1,0 +1,14 @@
+package com.abstractexamples;
+
+public class Tester {
+	public static void main(String args[])
+	{
+		Employeeserviceimpl emp=new Employeeserviceimpl();
+		
+		emp.createEmployee();
+		emp.deleteEmployeebyId("2");
+		emp.displayEmployee();
+		emp.deleteEmployeebyId("5");
+	}
+
+}
